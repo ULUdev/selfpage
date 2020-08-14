@@ -1,0 +1,13 @@
+body {
+    background-color: black;
+    color: crimson;
+    font-family: monospace;
+}
+h2 {
+    color: blueviolet;
+}
+button{
+    background-color: darkslategray;
+    color: crimson;
+    font-family: monospace;
+}

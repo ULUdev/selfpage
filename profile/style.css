@@ -1,0 +1,13 @@
+html{
+    font-family: monospace;
+}
+body {
+    background-color: black;
+    color: crimson;
+    font-family: monospace;
+}
+button{
+    background-color: darkslategray;
+    color: crimson;
+    font-family: monospace;
+}
