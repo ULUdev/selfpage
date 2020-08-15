@@ -5,12 +5,25 @@ body {
     background-color: rgb(15, 15, 15);
     color: crimson;
     font-family: monospace;
+    text-align: center;
 }
+
 h2 {
     color: blueviolet;
 }
-button{
-    background-color: darkslategray;
-    color: crimson;
+
+#img1{
+    align-self: center;
+}
+#btn1,#btn2{
+    border: 1px solid rgb(0, 52, 73);
     font-family: monospace;
+    background: none;
+    color: rgb(2, 109, 25);
+    padding: 10px 10px;
+    transition: 0.3s;
+}
+#btn1:hover,#btn2:hover{
+    background-color: crimson;
+    color: rgb(15, 15, 15);    
 }

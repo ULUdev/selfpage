@@ -5,9 +5,17 @@ body {
     background-color: rgb(15, 15, 15);
     color: crimson;
     font-family: monospace;
+    text-align: center;
 }
-button{
-    background-color: darkslategray;
+#btn1{
+    background: none;
     color: crimson;
     font-family: monospace;
+    padding: 10px 10px;
+    border: 1px solid rgb(0, 52, 73);
+    transition: 300ms;
+}
+#btn1:hover{
+    background-color: crimson;
+    color: rgb(15, 15, 15);
 }
