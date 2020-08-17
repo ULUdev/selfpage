@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="de">
     <head>
-        <meta charset="utf-8">
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
         <title>Projekte</title>
-        <link rel="icon" href="../src/title.ico">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" href="{{url_for("static", filename="src/title.ico")}}">
+        <link rel="stylesheet" href="{{ url_for("static", filename="projects.css")}}">
         <script src="../functions.js"></script>
     </head>
     <body>
@@ -13,23 +13,23 @@
         <hr>
         <div class="godot">
             <h3>Spiele</h3>
-            <img src="../src/GodotProject.png">
+            <img src="../static/src/GodotProject.png">
             <p>Ein Ausschnitt des Player Scripts</p>
         </div>
         <div class="UCS Bot">
             <h3>UCS Bot</h3>
-            <img src="../src/UCSbotcode.png">
+            <img src="../static/src/UCSbotcode.png">
             <p>Ein Ausschnitt des Codes von dem UCS Bot. Der volle Code steht <a href="https://gitlab.sokoll.com/moritz/discord-bot">hier</a></p>
         </div>
         <div class="discord">
             <h3>Discord Server(UCS)</h3>
-            <img src="../src/discord.png">
+            <img src="../static/src/discord.png">
             <p>Dieser discord Server wurde von mir Erstellt </p><p></p>In ihm werde Ich oft aktiv sein</p>
             <p>Den Link findest du <a href="https://discord.gg/u3tM3Ss">hier</a></p>
         </div>
         <div class="runmanager">
             <h3>Social.net</h3>
-            <img src="../src/Login(Social.net).png">
+            <img src="../static/src/Login(Social.net).png">
             <p>Social.net ist ein Projekt meinerseits in welchem ich mit Datenbanken gearbeitet habe.</p>
             <p>Das vollständige Projekt(mit ausnahme der Datenbank) findet man <a href="https://gitlab.sokoll.com/moritz/social-network-system">hier</a></p>
 
