@@ -16,6 +16,10 @@ body {
     transition: 300ms;
 }
 #btn1:hover{
+    cursor: pointer;
     background-color: crimson;
     color: rgb(15, 15, 15);
+}
+a{
+    color: crimson;
 }

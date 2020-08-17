@@ -1,9 +1,9 @@
-function on_index_switch(){
+function switch_to_profile(){
     document.location = "../profile/profile.html";
 }
-function on_profile_switch(){
+function switch_to_index(){
     document.location = "../index/index.html";
 }
-function on_index_to_projects(){
+function switch_to_projects(){
     document.location = "../projects/projects.html";
 }
