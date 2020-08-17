@@ -1,44 +1,22 @@
-import socket
+import flask
 import sys
-
-def load_img(file):
-    with open(file, "rb") as file:
-        return file.read()
-
-port = 8080
-host = "localhost"
-socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-print("[SERVER] created socket")
-try:
-    socket.bind((host, port))
-except Exception as e:
-    print(f"[SERVER] error occured: {e}")
-    sys.exit()
-socket.listen(10)
-try:
-    print(f"[SERVER] listening on port: {port}")
-    while True:
-        conn, addr = socket.accept()
-        print(f"[SERVER] new request: {addr}")
-        try:
-            data = conn.recv(1024).decode()
-            filename = data.split()[1]
-            if filename == "/":
-                filename = "/index/index.html"
-            if ".png" in filename or ".ico" in filename:
-                outdat = load_img(filename)
-            else:
-                file = open(filename[1:])
-                outdat = file.read()
-                file.close()
-            conn.send("HTTP/1.0 200 OK\r\n\r\n".encode())
-            #conn.send("content-type: text/html\n".encode())
-            for i in range(0, len(outdat)):
-                conn.send(outdat[i].encode())
-            conn.close()
-        except Exception:
-            conn.send("404 Not found".encode())
-            conn.close()
-except KeyboardInterrupt:
-    print("\n[SERVER] going down")
-    socket.close()
+import PIL as pil
+from werkzeug.utils import secure_filename
+app = flask.Flask(__name__, template_folder="sites")
+app.config.update(UPLOAD_FOLDER="src")
+@app.route("/<url>")
+def link(url):
+    #print(url)
+    try:
+        if url == "index" or url == "" or url == "sites/index.html":
+            return flask.render_template("index.html"), 200
+        elif url == "profile" or url == "sites/profile.html":
+            return flask.render_template("profile.html"), 200
+        elif url == "projects" or url == "sites/projects.html":
+            return flask.render_template("projects.html"), 200 
+        else:
+            return open(url).read(), 200
+    except:
+        return "Could not Load resource", 404
+if __name__ == "__main__":
+    app.run(host="localhost", port=8080, debug=True)
