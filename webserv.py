@@ -13,7 +13,7 @@ def link(url):
         elif url == "profile" or url == "sites/profile.html":
             return flask.render_template("profile.html"), 200
         elif url == "projects" or url == "sites/projects.html":
-            return flask.render_template("projects.html"), 200 
+            return flask.render_template("projects.html"), 200
         else:
             return open(url).read(), 200
     except:
