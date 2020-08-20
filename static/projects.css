@@ -1,27 +1,31 @@
 body{
     font-family: monospace;
-    background-color: rgb(15, 15, 15);
-    color: crimson;
+    background-color: rgb(15, 15, 30);
+    color: cyan;
     text-align: center;
+    font-size: large;
 }
 div{
     float: left;
 }
 #btn1{
-    border: 1px solid crimson;
+    border: 1px solid cyan;
     font-family: monospace;
     background: none;
-    color: crimson;
+    color: cyan;
     padding: 10px 10px;
     transition: 300ms;
 }
 #btn1:hover{
     cursor: pointer;
-    background-color: crimson;
-    color: rgb(15, 15, 15);
+    background-color: cyan;
+    color: rgb(15, 15, 30);
     border-radius: 5px;
-    box-shadow: 10px 10px rgb(55, 5, 15);
+    box-shadow: 10px 10px rgb(0, 50, 50);
 }
 a{
-    color: crimson;
+    color: cyan;
+}
+img{
+    align-self: center;
 }

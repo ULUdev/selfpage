@@ -3,12 +3,16 @@
 }
 body {
     color: cyan;
-    background-color: rgb(15, 15, 15);
+    background-color: rgb(15, 15, 30);
     font-family: monospace;
     text-align: center;
     font-size: large;
 }
-
+h1{
+    text-shadow: 5px 5px rgb(0, 50, 50);
+    text-decoration: underline solid blueviolet;
+    font-size: 50px;
+}
 h2 {
     color: blueviolet;
 }
@@ -26,7 +30,7 @@ h2 {
 }
 #btn1:hover,#btn2:hover{
     background-color: cyan;
-    color: rgb(15, 15, 15);  
+    color: rgb(15, 15, 30);  
     border-radius: 5px;
     box-shadow: 10px 10px rgb(0, 50, 50);  
 }
