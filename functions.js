@@ -1,9 +1,9 @@
 function switch_to_profile(){
-    document.location = "sites/profile.html";
+    document.location = "about.html";
 }
 function switch_to_index(){
-    document.location = "sites/index.html";
+    document.location = "index.html";
 }
 function switch_to_projects(){
-    document.location = "sites/projects.html";
+    document.location = "projects.html";
 }

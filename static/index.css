@@ -17,7 +17,7 @@ h2 {
 }
 #btn1,#btn2{
     cursor: pointer;
-    border: 1px solid rgb(0, 52, 73);
+    border: 1px solid crimson;
     font-family: monospace;
     background: none;
     color: crimson;
@@ -26,5 +26,7 @@ h2 {
 }
 #btn1:hover,#btn2:hover{
     background-color: crimson;
-    color: rgb(15, 15, 15);    
+    color: rgb(15, 15, 15);  
+    border-radius: 5px;
+    box-shadow: 10px 10px rgb(55, 5, 15);  
 }

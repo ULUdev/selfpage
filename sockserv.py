@@ -17,6 +17,10 @@ try:
         print(f"[SERVER] new request: {filename}")
         if filename == "/" or filename == "/index":
             filename = "/sites/index.html"
+        elif filename == "/about":
+            filename = "/sites/about.html"
+        elif filename == "/projects":
+            filename = "/sites/projects.html"
         if filename.endswith(".html"):
             filetype = "text/html"
         elif filename.endswith(".css"):
