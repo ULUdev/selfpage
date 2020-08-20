@@ -1,32 +1,32 @@
 .div1{
-    color: darkturquoise;
+    color: rgb(0, 100, 100);
 }
 body {
-    color: crimson;
+    color: cyan;
     background-color: rgb(15, 15, 15);
     font-family: monospace;
     text-align: center;
+    font-size: large;
 }
 
 h2 {
     color: blueviolet;
 }
-
 #img1{
     align-self: center;
 }
 #btn1,#btn2{
     cursor: pointer;
-    border: 1px solid crimson;
+    border: 1px solid cyan;
     font-family: monospace;
     background: none;
-    color: crimson;
+    color: cyan;
     padding: 10px 10px;
     transition: 0.3s;
 }
 #btn1:hover,#btn2:hover{
-    background-color: crimson;
+    background-color: cyan;
     color: rgb(15, 15, 15);  
     border-radius: 5px;
-    box-shadow: 10px 10px rgb(55, 5, 15);  
+    box-shadow: 10px 10px rgb(0, 50, 50);  
 }

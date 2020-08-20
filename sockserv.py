@@ -14,7 +14,6 @@ try:
         data = conn.recv(1024).decode()
         filename = data.split()[1]
         filetype = ""
-        print(f"[SERVER] new request: {filename}")
         if filename == "/" or filename == "/index":
             filename = "/sites/index.html"
         elif filename == "/about":
@@ -22,28 +21,34 @@ try:
         elif filename == "/projects":
             filename = "/sites/projects.html"
         if filename.endswith(".html"):
-            filetype = "text/html"
+            filetype = "text/html; charset=UTF-8"
         elif filename.endswith(".css"):
-            filetype = "text/css"
+            filetype = "text/css; charset=UTF-8"
         elif filename.endswith(".js"):
-            filetype = "text/javascript"
+            filetype = "text/javascript; charset=UTF-8"
         elif filename.endswith(".png"):
             filetype = "image/png"
-        conn.send("HTTP/1.0 200 OK\n".encode())
-        if filetype == "":
-            conn.send("\n".encode())
-        else:
-            conn.send(f"content-type: {filetype}\n".encode())
         file = filename.split("/", maxsplit=1)[1]
         try:
+            if filetype == "":
+                filetype = "\n".encode()
+            else:
+                filetype = f"content-type: {filetype}\n".encode()
             if filename.endswith(".png"):
                 file = open(file, "rb").read()
+                out = file
             else:
                 file = open(file).read()
-            conn.send(file.encode())
-            
+                out = file.encode()
+                print(f"[SERVER] new request: {filename} 200")
+            conn.send("HTTP/1.0 200 OK\n".encode())
+            conn.send(filetype)
+            conn.send(out)
         except:
-            conn.send("HTTP/1.0 404\n\nNot found".encode())
+            conn.send("HTTP/1.0 404\n\n".encode())
+            erpg = open("sites/error.html").read()
+            conn.send(erpg.encode())
+            print(f"[SERVER] new request: {filename} 404")
         conn.close()
 except KeyboardInterrupt:
     print("\n[SERVER] stopping")
