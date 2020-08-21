@@ -26,3 +26,18 @@ body {
 a{
     color: cyan;
 }
+.Contact input{
+    background: none;
+    color: cyan;
+    font-family: monospace;
+    padding: 10px 10px;
+    border: 1px solid cyan;
+    transition: 300ms
+}
+.Contact input:hover{
+    cursor: pointer;
+    background-color: cyan;
+    color: rgb(15, 15, 30);
+    border-radius: 5px;
+    box-shadow: 10px 10px rgb(0, 50, 50);
+}
