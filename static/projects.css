@@ -10,6 +10,7 @@ div{
 }
 #btn1{
     border: 1px solid cyan;
+    border-radius: 5px;
     font-family: monospace;
     background: none;
     color: cyan;

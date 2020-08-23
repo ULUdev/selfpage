@@ -10,6 +10,7 @@ body {
 }
 #btn1{
     background: none;
+    border-radius: 5px;
     color: cyan;
     font-family: monospace;
     padding: 10px 10px;
@@ -26,21 +27,17 @@ body {
 a{
     color: cyan;
 }
-.Contact input{
-    background: none;
-    color: cyan;
-    font-family: monospace;
-    padding: 10px 10px;
+table, th, td{
+    margin-left: auto;
+    margin-right: auto;
     border: 1px solid cyan;
-    transition: 300ms
 }
-.Contact input:hover{
-    cursor: pointer;
-    background-color: cyan;
-    color: rgb(15, 15, 30);
-    border-radius: 5px;
-    box-shadow: 10px 10px rgb(0, 50, 50);
+th{
+    color: rgb(255, 10, 255);
 }
 footer{
     padding: 30px 30px;
+}
+#dc{
+    color: rgb(175, 0, 175);
 }

@@ -1,0 +1,31 @@
+body{
+    text-align: center;
+    background-color: rgb(15, 15, 30);
+    font-family: monospace;
+    color: cyan;
+}
+ul{
+    display: inline-block;
+}
+div{
+    display: inline-block;
+}
+.info{
+    background-color: cyan;
+    color: rgb(15, 15, 30);
+}
+.button, button{
+    background: none;
+    color: cyan;
+    border: 1px solid cyan;
+    padding: 10px 10px;
+    font-family: monospace;
+    transition: 300ms;
+    border-radius: 5px;
+}
+.button:hover, button:hover{
+    cursor: pointer;
+    background-color: cyan;
+    color: rgb(15, 15, 30);
+    box-shadow: 10px 10px rgb(0, 50, 50);
+}

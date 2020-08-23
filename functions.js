@@ -7,3 +7,6 @@ function switch_to_index(){
 function switch_to_projects(){
     document.location = "projects.html";
 }
+function switch_to_discord(){
+    document.location = "discord.html";
+}
