@@ -20,7 +20,7 @@ h2 {
     align-self: center;
 }
 
-#btn1,#btn2, #btn3{
+button, .button{
     cursor: pointer;
     border: 1px solid cyan;
     border-radius: 5px;
@@ -30,7 +30,7 @@ h2 {
     padding: 10px 10px;
     transition: 0.3s;
 }
-#btn1:hover,#btn2:hover, #btn3:hover{
+button:hover, .button:hover{
     background-color: cyan;
     color: rgb(15, 15, 30);
     box-shadow: 10px 10px rgb(0, 50, 50);
