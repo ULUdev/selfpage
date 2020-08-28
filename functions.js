@@ -1,12 +1,3 @@
-function switch_to_profile(){
-    document.location = "about.html";
-}
-function switch_to_index(){
-    document.location = "index.html";
-}
-function switch_to_projects(){
-    document.location = "projects.html";
-}
-function switch_to_discord(){
-    document.location = "discord.html";
+function switch_to(page){
+    document.location = page;
 }
