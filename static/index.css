@@ -2,10 +2,6 @@
     color: rgb(0, 100, 100);
 }
 body {
-    color: cyan;
-    background-color: rgb(15, 15, 30);
-    font-family: monospace;
-    text-align: center;
     font-size: large;
 }
 h1{
@@ -20,21 +16,3 @@ h2 {
     align-self: center;
 }
 
-button, .button{
-    cursor: pointer;
-    border: 1px solid cyan;
-    border-radius: 5px;
-    font-family: monospace;
-    background: none;
-    color: cyan;
-    padding: 10px 10px;
-    transition: 0.3s;
-}
-button:hover, .button:hover{
-    background-color: cyan;
-    color: rgb(15, 15, 30);
-    box-shadow: 10px 10px rgb(0, 50, 50);
-}
-footer{
-    padding: 30px 30px;
-}

@@ -1,28 +1,5 @@
-body{
-    font-family: monospace;
-    background-color: rgb(15, 15, 30);
-    color: cyan;
-    text-align: center;
-    font-size: large;
-}
 div{
     float: left;
-}
-#btn1{
-    border: 1px solid cyan;
-    border-radius: 5px;
-    font-family: monospace;
-    background: none;
-    color: cyan;
-    padding: 10px 10px;
-    transition: 300ms;
-}
-#btn1:hover{
-    cursor: pointer;
-    background-color: cyan;
-    color: rgb(15, 15, 30);
-    border-radius: 5px;
-    box-shadow: 10px 10px rgb(0, 50, 50);
 }
 a{
     color: cyan;
@@ -30,6 +7,6 @@ a{
 img{
     align-self: center;
 }
-footer{
-    padding: 30px 30px;
+ul{
+	display: inline-block;
 }
