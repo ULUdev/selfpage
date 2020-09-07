@@ -1,5 +1,21 @@
-div{
+body::-webkit-scrollbar{
+	width: 10px;
+}
+body::-webkit-scrollbar-track{
+	background: cyan;
+}
+body::-webkit-scrollbar-thumb{
+	border-radius: 3px;
+	background: rgb(0, 50, 50);
+	padding:-2px -2px;
+	transition: 300ms;
+}
+body::-webkit-scrollbar-thumb:hover{
+	background-color: rgb(15, 15, 30);
+}
+.project{
     float: left;
+	padding: 10px 10px 
 }
 a{
     color: cyan;
@@ -9,4 +25,8 @@ img{
 }
 ul{
 	display: inline-block;
+	padding: 20px 20px;
+	background-color: cyan;
+	color: rgb(15, 15, 30);
+	border-radius: 5px;
 }

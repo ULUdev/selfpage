@@ -14,12 +14,14 @@ try:
         data = conn.recv(1024).decode()
         filename = data.split()[1]
         filetype = ""
-        if filename == "/" or filename == "/index":
-            filename = "/sites/index.html"
-        elif filename == "/about":
-            filename = "/sites/about.html"
-        elif filename == "/projects":
-            filename = "/sites/projects.html"
+        if filename == "/" or filename == "/index" or filename == "/index.html":
+            filename = "/pages/index.html"
+        elif filename == "/about" or filename == "/about.html":
+            filename = "/pages/about.html"
+        elif filename == "/projects" or filename == "/projects.html":
+            filename = "/pages/projects.html"
+        elif filename == "/discord" or filename == "/discord.html":
+            filename = "/pages/discord.html"
         if filename.endswith(".html"):
             filetype = "text/html; charset=UTF-8"
         elif filename.endswith(".css"):
@@ -42,11 +44,11 @@ try:
                 out = file.encode()
                 print(f"[SERVER] new request: {filename} 200")
             conn.send("HTTP/1.0 200 OK\n".encode())
-            conn.send(filetype)
+            conn.send(filetype + "\r\n".encode())
             conn.send(out)
         except:
             conn.send("HTTP/1.0 404\n\n".encode())
-            erpg = open("sites/error.html").read()
+            erpg = open("pages/error.html").read()
             conn.send(erpg.encode())
             print(f"[SERVER] new request: {filename} 404")
         conn.close()

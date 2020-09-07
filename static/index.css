@@ -4,6 +4,9 @@
 body {
     font-size: large;
 }
+body::-webkit-scrollbar{
+	width: 1px;
+}
 h1{
     text-shadow: 2px 2px rgb(0, 50, 50);
     text-decoration: underline solid blueviolet;
