@@ -5,8 +5,12 @@ socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #connecting
 host = "localhost"
 port = 8080
-socket.bind((host, port))
 print("starting Server")
+try:
+    socket.bind((host, port))
+except Exception as e:
+    print(f"[SERVER] failed setup: {e}")
+    sys.exit()
 
 #listening
 socket.listen(5)
