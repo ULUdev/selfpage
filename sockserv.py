@@ -1,5 +1,6 @@
 import sys
 import socket
+import json
 socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 #connecting
@@ -11,6 +12,13 @@ try:
 except Exception as e:
     print(f"[SERVER] failed setup: {e}")
     sys.exit()
+
+#error 404
+def senderr(conn):
+    conn.send("HTTP/1.0 404\n".encode())
+    conn.send("content-type: text/html; charset=UTF-8\n\r\n".encode())
+    errp = open("pages/error.html").read()
+    conn.send(errp.encode())
 
 #listening
 socket.listen(5)
@@ -35,6 +43,26 @@ try:
                 conn.send("content-type: text/html; charset=UTF-8\n\r\n".encode())
                 conn.send(bytes(page, 'UTF-8'))
     
+        elif "dat?" in filename:
+            print(f"[SERVER] new dynamic request: {filename}")
+            if "?name=" not in filename:
+                senderr(conn)
+            else:
+                name = filename.split("?name=")[1]
+                with open("data.json") as file:
+                    data = json.load(file)
+                if name not in data:
+                    senderr(conn)
+                else:
+                    datout = ""
+                    conn.send("HTTP/1.0 200 OK\n".encode())
+                    conn.send("content-type: text/html; charset=UTF-8\n\r\n".encode())
+                    for dat in data[name]:
+                        datout += f"<li>{dat}</li>"
+                    page = open("pages/dat.html").read()
+                    page = page.format(name=name, data=datout)
+                    conn.send(page.encode())
+
         #routing
         else:
             if filename == "/" or filename == "/index" or filename == "/index.html":
