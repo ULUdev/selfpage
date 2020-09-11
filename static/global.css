@@ -20,6 +20,9 @@ button:hover, .button:hover{
 	box-shadow: 10px 10px rgb(0, 50, 50);
 	cursor: pointer;
 }
+ul{
+	display: inline-block;
+}
 footer{
 	padding: 30px 30px;
 }
