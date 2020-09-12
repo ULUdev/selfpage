@@ -58,7 +58,7 @@ try:
                     conn.send("HTTP/1.0 200 OK\n".encode())
                     conn.send("content-type: text/html; charset=UTF-8\n\r\n".encode())
                     for dat in data[name]:
-                        datout += f"<li>{dat}</li>"
+                        datout += f"<li>{dat}: {data[name][dat]}</li>\n\t\t\t"
                     page = open("pages/dat.html").read()
                     page = page.format(name=name, data=datout)
                     conn.send(page.encode())
