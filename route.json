@@ -1,0 +1,11 @@
+{
+	"/": "/pages/index.html",
+	"/index": "/pages/index.html",
+	"/index.html": "/pages/index.html",
+	"/about": "/pages/about.html",
+	"/about.html": "/pages/about.html",
+	"/projects": "/pages/projects.html",
+	"/projects.html": "/pages/projects.html",
+	"/discord": "/pages/discord.html",
+	"/discord.html": "/pages/discord.html"
+}
