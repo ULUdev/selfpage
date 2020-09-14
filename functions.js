@@ -1,3 +1,3 @@
 function switch_to(page){
-    document.location = page;
+    document.location = "/pages/" + page;
 }
