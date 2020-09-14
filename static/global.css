@@ -35,3 +35,6 @@ img{
 	border: 1px solid cyan;
 	border-radius: 5px;
 }
+.ignimg{
+	border: none;
+}
