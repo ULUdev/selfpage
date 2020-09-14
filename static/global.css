@@ -26,3 +26,7 @@ ul{
 footer{
 	padding: 30px 30px;
 }
+a{
+	color: cyan;
+	text-decoration: underline solid cyan;
+}
