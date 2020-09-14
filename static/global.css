@@ -30,3 +30,8 @@ a{
 	color: cyan;
 	text-decoration: underline solid cyan;
 }
+img{
+	max-width: 100%;
+	border: 1px solid cyan;
+	border-radius: 5px;
+}
