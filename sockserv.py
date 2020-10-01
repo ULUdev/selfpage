@@ -1,6 +1,11 @@
 import sys
 import socket
+import json
 socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+#setup
+with open("route.json") as file:
+    route = json.load(file)
 
 #connecting
 host = "localhost"
@@ -37,14 +42,8 @@ try:
     
         #routing
         else:
-            if filename == "/" or filename == "/index" or filename == "/index.html":
-                filename = "/pages/index.html"
-            elif filename == "/about" or filename == "/about.html":
-              filename = "/pages/about.html"
-            elif filename == "/projects" or filename == "/projects.html":
-                filename = "/pages/projects.html"
-            elif filename == "/discord" or filename == "/discord.html":
-                filename = "/pages/discord.html"
+            if filename in route:
+                filename = route[filename]
 
         #mimetype
             if filename.endswith(".html"):
