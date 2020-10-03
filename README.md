@@ -5,4 +5,5 @@
 	<li>Personal information</li>
 	<li>My Projects</li>
 	<li>my contacts</li>
+<p>the file route.json is only important for my own webserver (sockserv.py)</p>
 </ul>
